@@ -1,3 +1,7 @@
+////TESTING///
+////WHICH FILE WILL THIS WRITE TO?///
+
+
 // Variables
 const serverURL = "wss://artistic-endurable-lifeboat.glitch.me";  // make sure you EDIT THIS!
                                                                
@@ -51,8 +55,6 @@ document.querySelector("#preloadAudioBtn").addEventListener('click', () => {
 });
 
 
-
-
 // RECEIVE
 
 socket.on("connect", () => {            
@@ -77,7 +79,7 @@ socket.on("message", myJSobj => {
     } else {
         logo = ` <span style="width: 15px; height: 15px; margin:auto; display: inline-block; vertical-align: middle; background: rgb(${myJSobj.color[0]}, ${myJSobj.color[1]}, ${myJSobj.color[2]})"></span> `
     };
-    newLine.innerHTML += `<span style="font-family: monospace">${myJSobj.id.substring(0,3)}</span>`
+    // newLine.innerHTML += `<span style="font-family: monospace">${myJSobj.id.substring(0,3)}</span>`
     newLine.innerHTML += logo;
     newLine.innerHTML += `${myJSobj.message}<br/>`;
 
